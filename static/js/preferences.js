@@ -11,7 +11,7 @@ function submitForm() {
     var formData = {
         ageLevel: $('#form-preference').find('select[id="age"]').val(),
         sex: $('#form-preference').find('select[id="sex"]').val(),
-        priceLevel: $('#form-preference').find('select[id="price"]').val(),
+        priceLevel: $('#form-preference').find('select[id="price"]').val()
     };
 
     console.log(formData.ageLevel);
@@ -19,15 +19,16 @@ function submitForm() {
     $.ajax({
         type: 'POST', url: '/api/preferences', data: formData,
         success: function (data) {
+            var resultElement = document.getElementById('result');
             if (data.length === 0) {
-                alert('0 gifts found :(')
+                resultElement.innerHTML = null;
+                alert('0 gifts found :(');
             } else {
                 var array = data,
                     listItems = array.reduce((result, item) => {
                         result += `<li>${item.id} ${item.name}</li>`;
                         return result;
                     }, '');
-                var resultElement = document.getElementById('result');
                 resultElement.innerHTML = listItems;
             }
         },
