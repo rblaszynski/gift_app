@@ -20,7 +20,7 @@ function submitForm() {
         type: 'POST', url: '/api/preferences', data: formData,
         success: function (data) {
             if (data.length === 0) {
-                alert('0')
+                alert('0 gifts found :(')
             } else {
                 var array = data,
                     listItems = array.reduce((result, item) => {
