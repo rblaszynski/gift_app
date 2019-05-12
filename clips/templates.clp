@@ -14,6 +14,7 @@
   (slot cat-gadgets (type STRING))
   (slot cat-sport (type STRING))
   (slot cat-cosmetics (type STRING))
+  (slot cat-toy (type STRING))
 )
 
 ; ; Template to represent user's preference.
@@ -29,6 +30,7 @@
   (slot cat-gadgets (type STRING))
   (slot cat-sport (type STRING))
   (slot cat-cosmetics (type STRING))
+  (slot cat-toy (type STRING))
 )
 
 ; ; Template to represent user's suggestions (for fine-tuning gifts).
