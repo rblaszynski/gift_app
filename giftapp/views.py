@@ -1,16 +1,19 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
+import os
+
 import clips
 import json
 
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render
 
 # Create your views here.
 from django.views.decorators.csrf import csrf_exempt
 
 from gift_app import settings
+from giftapp.models import Suggestion
 
 
 def index(request):
@@ -62,3 +65,56 @@ def prepare_response(data):
                              "age-level": val[3], "price-level": val[4]
                              })
     return response
+
+@csrf_exempt
+def modify(request):
+    insertSuggestionIntoDatabase(request.POST)
+    insertSuggestionsIntoClips()
+    return HttpResponse('')
+
+
+def insertSuggestionIntoDatabase(data):
+    attributeMap = {'sex': 'sex',
+                    'priceLevel': 'price-level',
+                    'ageLevel': 'age-level'}
+
+    suggestion = Suggestion(
+        giftName=data['giftName'],
+        giftId=int(data['giftId']),
+        attribute=attributeMap[data['key']],
+        value=data['value'],
+        quantity=0)
+
+    suggestions = Suggestion.objects.filter(giftId=int(data['giftId']), attribute=attributeMap[data['key']],
+                                            value=data['value'])
+    if (len(suggestions) != 0):
+        suggestion = suggestions[0]
+
+    suggestion.quantity = suggestion.quantity + 1
+    suggestion.save()
+    print suggestion
+
+
+def insertSuggestionsIntoClips():
+    # check if a fact-file exists
+    FactsFile = settings.CLIPS_DIR + "/suggestions.clp"
+    if not os.path.isfile(FactsFile):
+        file = open(FactsFile, 'w+')
+        file.write("(deffacts suggestions)\n")
+        file.close()
+
+    # modify facts
+    suggestions = Suggestion.objects.all()
+    lines = ['(deffacts suggestions\n']
+    for suggestion in suggestions:
+        lines.append('  (suggestion '
+                     '(gift-name "'+suggestion.giftName+'")'
+                     '(gift-id '+str(suggestion.giftId)+')'
+                     '(attribute "'+suggestion.attribute+'")'
+                     '(value "'+suggestion.value+'")'
+                     '(quantity '+str(suggestion.quantity)+'))\n')
+
+    lines.append(')\n')
+
+    # new facts
+    open(FactsFile, 'w').writelines(lines)

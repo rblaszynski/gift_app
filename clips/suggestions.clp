@@ -4,4 +4,7 @@
   (suggestion (gift-name "shaving kit")(gift-id 3)(attribute "cat-cosmetics")(value "YES")(quantity 1))
   (suggestion (gift-name "SPA weekend")(gift-id 4)(attribute "cat-cosmetics")(value "YES")(quantity 1))
   (suggestion (gift-name "powerbank")(gift-id 6)(attribute "cat-gadgets")(value "YES")(quantity 1))
+  (suggestion (gift-name "rv-car")(gift-id 2)(attribute "age-level")(value "kid")(quantity 4))
+  (suggestion (gift-name "rv-car")(gift-id 2)(attribute "age-level")(value "adult")(quantity 7))
+  (suggestion (gift-name "rv-car")(gift-id 2)(attribute "age-level")(value "teen")(quantity 71))
 )
