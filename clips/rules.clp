@@ -62,6 +62,17 @@
 	(modify ?d (cat-music ?value))
 )
 
+; ; Rule of tuning "cat-book"
+(defrule tuning-cat-book
+	(declare (salience 2))
+	?d <- (gift (ID ?id) (cat-book ?origin))
+	(suggestion (gift-id ?id) (attribute "cat-book") (value ?value&:(neq ?value ?origin)) (quantity ?quantity))
+	(not (suggestion (gift-id ?id) (attribute "cat-book") (value ?value2)
+		(quantity ?quantity2&:(or (> ?quantity2 ?quantity)(and (= ?quantity2 ?quantity) (< (str-compare ?value2 ?value) 0))))))
+=>
+	(modify ?d (cat-book ?value))
+)
+
 ; ; Rule of tuning "cat-games"
 (defrule tuning-cat-games
 	(declare (salience 2))
