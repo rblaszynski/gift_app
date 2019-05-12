@@ -1,3 +1,7 @@
+var currentData;
+var currentGift;
+var values;
+
 $(document).ready(function () {
     console.log('working!');
 });
@@ -34,6 +38,22 @@ function submitForm() {
         },
         error: function (error) {
             console.error(error);
+        }
+    });
+}
+
+function newSuggestion(key, value) {
+    // Ajax post
+    $.ajax({
+        type: 'POST', url: '/api/modifications', data: {
+            key: key,
+            value: value,
+            dishName: currentData[currentGift].name,
+            dishId: currentData[currentGift].id,
+        },
+        success: function (data) {
+        },
+        error: function () {
         }
     });
 }

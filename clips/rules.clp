@@ -1,7 +1,7 @@
 ; ; Rules for matching gifts with given preference
 ; ; Salience set to 1 so this rule will be fired at the end.
 ; ; (Other rules have salience = 2)
-(defrule dishes-matching
+(defrule gifts-matching
 	(declare (salience 1))
 	(gift (ID ?ID) (name ?name) (sex ?sex) (age-level ?age) (price-level ?price))
 	(preference (sex "?"|?sex)
