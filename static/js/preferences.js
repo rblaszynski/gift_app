@@ -18,6 +18,7 @@ function submitForm() {
         priceLevel: $('#form-preference').find('select[id="price"]').val(),
         catFashion: $('#form-preference').find('select[id="fashion"]').val(),
         catMusic: $('#form-preference').find('select[id="music"]').val(),
+        catBook: $('#form-preference').find('select[id="book"]').val(),
         catGames: $('#form-preference').find('select[id="games"]').val(),
         catMovies: $('#form-preference').find('select[id="movies"]').val(),
         catGadgets: $('#form-preference').find('select[id="gadgets"]').val(),

@@ -4,7 +4,8 @@
 (defrule gifts-matching
 	(declare (salience 1))
 	(gift (ID ?ID) (name ?name) (sex ?sex) (age-level ?age) (price-level ?price) (cat-fashion ?fashion) (cat-music ?music) (cat-book ?book) (cat-games ?games) (cat-movies ?movies) (cat-gadgets ?gadgets) (cat-sport ?sport) (cat-cosmetics ?cosmetics) (cat-toy ?toy)
-	(preference (sex "?"|?sex)
+	(preference
+	        (sex "?"|?sex)
 			(age-level "?"|?age)
 			(price-level "?"|?price)
 			(cat-fashion "?"|?fashion)

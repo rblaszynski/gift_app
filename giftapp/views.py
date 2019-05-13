@@ -47,6 +47,7 @@ def match_preference(data):
                  '(age-level "' + data['ageLevel'] + '") ' + \
                  '(cat-fashion "' + data['catFashion'] + '") ' + \
                  '(cat-music "' + data['catMusic'] + '") ' + \
+                 '(cat-book "' + data['catBook'] + '") ' + \
                  '(cat-games "' + data['catGames'] + '") ' + \
                  '(cat-movies "' + data['catMovies'] + '") ' + \
                  '(cat-gadgets "' + data['catGadgets'] + '") ' + \
@@ -58,7 +59,7 @@ def match_preference(data):
     clips.Clear()
     clips.BatchStar(settings.CLIPS_DIR + "/templates.clp")
     clips.BatchStar(settings.CLIPS_DIR + "/gifts.clp")
-    clips.BatchStar(settings.CLIPS_DIR + "/suggestions.clp")
+    # clips.BatchStar(settings.CLIPS_DIR + "/suggestions.clp")
     clips.BatchStar(settings.CLIPS_DIR + "/rules.clp")
     clips.Reset()
     clips.Assert(preference)
