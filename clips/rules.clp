@@ -3,7 +3,7 @@
 ; ; (Other rules have salience = 2)
 (defrule gifts-matching
 	(declare (salience 1))
-	(gift (ID ?ID) (name ?name) (sex ?sex) (age-level ?age) (price-level ?price) (cat-fashion ?fashion) (cat-music ?music) (cat-book ?book) (cat-games ?games) (cat-movies ?movies) (cat-gadgets ?gadgets) (cat-sport ?sport) (cat-cosmetics ?cosmetics) (cat-toy ?toy)
+	(gift (ID ?ID) (name ?name) (sex ?sex) (age-level ?age) (price-level ?price) (cat-fashion ?fashion) (cat-music ?music) (cat-book ?book) (cat-games ?games) (cat-movies ?movies) (cat-gadgets ?gadgets) (cat-sport ?sport) (cat-cosmetics ?cosmetics) (cat-toy ?toy))
 	(preference
 	        (sex "?"|?sex)
 			(age-level "?"|?age)
@@ -18,7 +18,7 @@
 			(cat-cosmetics "?"|?cosmetics)
 			(cat-toy "?"|?toy))
 =>
-	(printout t ?ID "," ?name "," ?sex "," ?age "," ?price ":" ?fashion "," ?music "," ?book "," ?games "," ?movies "," ?gadgets "," ?sport "," ?cosmetics "," ?toy)
+	(printout t ?ID "," ?name ":")
 )
 
 ; ; Rule of tuning "price-level"

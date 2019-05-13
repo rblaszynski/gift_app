@@ -59,7 +59,7 @@ def match_preference(data):
     clips.Clear()
     clips.BatchStar(settings.CLIPS_DIR + "/templates.clp")
     clips.BatchStar(settings.CLIPS_DIR + "/gifts.clp")
-    # clips.BatchStar(settings.CLIPS_DIR + "/suggestions.clp")
+    clips.BatchStar(settings.CLIPS_DIR + "/suggestions.clp")
     clips.BatchStar(settings.CLIPS_DIR + "/rules.clp")
     clips.Reset()
     clips.Assert(preference)
@@ -73,9 +73,7 @@ def prepare_response(data):
     for gift in data.split(':'):
         if "," in gift:
             val = gift.split(',')
-            response.append({"id": val[0], "name": val[1], "sex": val[2],
-                             "age-level": val[3], "price-level": val[4]
-                             })
+            response.append({"id": val[0], "name": val[1]})
     return response
 
 @csrf_exempt
