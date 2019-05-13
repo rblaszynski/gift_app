@@ -3,19 +3,21 @@
 ; ; (Other rules have salience = 2)
 (defrule gifts-matching
 	(declare (salience 1))
-	(gift (ID ?ID) (name ?name) (sex ?sex) (age-level ?age) (price-level ?price) (cat-fashion ?fashion) (cat-music ?music) (cat-games ?games) (cat-movies ?movies) (cat-gadgets ?gadgets) (cat-sport ?sport) (cat-cosmetics ?cosmetics))
+	(gift (ID ?ID) (name ?name) (sex ?sex) (age-level ?age) (price-level ?price) (cat-fashion ?fashion) (cat-music ?music) (cat-book ?book) (cat-games ?games) (cat-movies ?movies) (cat-gadgets ?gadgets) (cat-sport ?sport) (cat-cosmetics ?cosmetics) (cat-toy ?toy)
 	(preference (sex "?"|?sex)
 			(age-level "?"|?age)
 			(price-level "?"|?price))
 			(cat-fashion "?"|?fashion)
 			(cat-music "?"|?music)
+			(cat-book "?"|?book)
 			(cat-games "?"|?games)
 			(cat-movies "?"|?movies)
 			(cat-gadgets "?"|?gadgets)
 			(cat-sport "?"|?sport)
 			(cat-cosmetics "?"|?cosmetics)
+			(cat-toy "?"|?toy)
 =>
-	(printout t ?ID "," ?name "," ?sex "," ?age "," ?price ":" ?fashion "," ?music "," ?games "," ?movies "," ?gadgets "," ?sport "," ?cosmetics ",")
+	(printout t ?ID "," ?name "," ?sex "," ?age "," ?price ":" ?fashion "," ?music "," ?book "," ?games "," ?movies "," ?gadgets "," ?sport "," ?cosmetics "," ?toy ",")
 )
 
 ; ; Rule of tuning "price-level"
@@ -60,6 +62,17 @@
 		(quantity ?quantity2&:(or (> ?quantity2 ?quantity)(and (= ?quantity2 ?quantity) (< (str-compare ?value2 ?value) 0))))))
 =>
 	(modify ?d (cat-music ?value))
+)
+
+; ; Rule of tuning "cat-book"
+(defrule tuning-cat-book
+	(declare (salience 2))
+	?d <- (gift (ID ?id) (cat-book ?origin))
+	(suggestion (gift-id ?id) (attribute "cat-book") (value ?value&:(neq ?value ?origin)) (quantity ?quantity))
+	(not (suggestion (gift-id ?id) (attribute "cat-book") (value ?value2)
+		(quantity ?quantity2&:(or (> ?quantity2 ?quantity)(and (= ?quantity2 ?quantity) (< (str-compare ?value2 ?value) 0))))))
+=>
+	(modify ?d (cat-book ?value))
 )
 
 ; ; Rule of tuning "cat-games"
@@ -115,4 +128,15 @@
 		(quantity ?quantity2&:(or (> ?quantity2 ?quantity)(and (= ?quantity2 ?quantity) (< (str-compare ?value2 ?value) 0))))))
 =>
 	(modify ?d (cat-cosmetics ?value))
+)
+
+; ; Rule of tuning "cat-toy"
+(defrule tuning-cat-toy
+	(declare (salience 2))
+	?d <- (gift (ID ?id) (cat-toy ?origin))
+	(suggestion (gift-id ?id) (attribute "cat-toy") (value ?value&:(neq ?value ?origin)) (quantity ?quantity))
+	(not (suggestion (gift-id ?id) (attribute "cat-toy") (value ?value2)
+		(quantity ?quantity2&:(or (> ?quantity2 ?quantity)(and (= ?quantity2 ?quantity) (< (str-compare ?value2 ?value) 0))))))
+=>
+	(modify ?d (cat-toy ?value))
 )

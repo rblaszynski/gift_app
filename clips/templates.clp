@@ -8,11 +8,13 @@
   (slot age-level (type STRING))
   (slot cat-fashion (type STRING))
   (slot cat-music (type STRING))
+  (slot cat-book (type STRING))
   (slot cat-games (type STRING))
   (slot cat-movies (type STRING))
   (slot cat-gadgets (type STRING))
   (slot cat-sport (type STRING))
   (slot cat-cosmetics (type STRING))
+  (slot cat-toy (type STRING))
 )
 
 ; ; Template to represent user's preference.
@@ -22,11 +24,13 @@
   (slot age-level (type STRING))
   (slot cat-fashion (type STRING))
   (slot cat-music (type STRING))
+  (slot cat-book (type STRING))
   (slot cat-games (type STRING))
   (slot cat-movies (type STRING))
   (slot cat-gadgets (type STRING))
   (slot cat-sport (type STRING))
   (slot cat-cosmetics (type STRING))
+  (slot cat-toy (type STRING))
 )
 
 ; ; Template to represent user's suggestions (for fine-tuning gifts).
