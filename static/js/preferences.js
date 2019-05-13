@@ -22,7 +22,8 @@ function submitForm() {
         catMovies: $('#form-preference').find('select[id="movies"]').val(),
         catGadgets: $('#form-preference').find('select[id="gadgets"]').val(),
         catSport: $('#form-preference').find('select[id="sport"]').val(),
-        catCosmetics: $('#form-preference').find('select[id="cosmetics"]').val()
+        catCosmetics: $('#form-preference').find('select[id="cosmetics"]').val(),
+        catToy: $('#form-preference').find('select[id="toy"]').val(),
     };
 
     console.log(formData.ageLevel);

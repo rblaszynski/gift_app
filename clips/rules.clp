@@ -6,7 +6,7 @@
 	(gift (ID ?ID) (name ?name) (sex ?sex) (age-level ?age) (price-level ?price) (cat-fashion ?fashion) (cat-music ?music) (cat-book ?book) (cat-games ?games) (cat-movies ?movies) (cat-gadgets ?gadgets) (cat-sport ?sport) (cat-cosmetics ?cosmetics) (cat-toy ?toy)
 	(preference (sex "?"|?sex)
 			(age-level "?"|?age)
-			(price-level "?"|?price))
+			(price-level "?"|?price)
 			(cat-fashion "?"|?fashion)
 			(cat-music "?"|?music)
 			(cat-book "?"|?book)
@@ -15,9 +15,10 @@
 			(cat-gadgets "?"|?gadgets)
 			(cat-sport "?"|?sport)
 			(cat-cosmetics "?"|?cosmetics)
-			(cat-toy "?"|?toy)
+			(cat-toy "?"|?toy))
 =>
-	(printout t ?ID "," ?name "," ?sex "," ?age "," ?price ":" ?fashion "," ?music "," ?book "," ?games "," ?movies "," ?gadgets "," ?sport "," ?cosmetics "," ?toy ",")
+	(printout "chuj")
+	(printout t ?ID "," ?name "," ?sex "," ?age "," ?price ":" ?fashion "," ?music "," ?book "," ?games "," ?movies "," ?gadgets "," ?sport "," ?cosmetics "," ?toy)
 )
 
 ; ; Rule of tuning "price-level"

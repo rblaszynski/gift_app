@@ -32,6 +32,7 @@ def preferences(request):
 def new_preference(request):
     # body = json.loads(request.POST)
     result = match_preference(request.POST)
+    print result
     response = []
     if result:
         response = prepare_response(result)
@@ -50,13 +51,14 @@ def match_preference(data):
                  '(cat-movies "' + data['catMovies'] + '") ' + \
                  '(cat-gadgets "' + data['catGadgets'] + '") ' + \
                  '(cat-sport "' + data['catSport'] + '") ' + \
-                 '(cat-cosmetics "' + data['catCosmetics'] + '"))'
+                 '(cat-cosmetics "' + data['catCosmetics'] + '") ' + \
+                 '(cat-toy "' + data['catToy'] + '"))'
 
     print(preference)
     clips.Clear()
     clips.BatchStar(settings.CLIPS_DIR + "/templates.clp")
     clips.BatchStar(settings.CLIPS_DIR + "/gifts.clp")
-    # clips.BatchStar(settings.CLIPS_DIR + "/suggestions.clp")
+    clips.BatchStar(settings.CLIPS_DIR + "/suggestions.clp")
     clips.BatchStar(settings.CLIPS_DIR + "/rules.clp")
     clips.Reset()
     clips.Assert(preference)
@@ -66,6 +68,7 @@ def match_preference(data):
 
 def prepare_response(data):
     response = []
+    print(data)
     for gift in data.split(':'):
         if "," in gift:
             val = gift.split(',')
