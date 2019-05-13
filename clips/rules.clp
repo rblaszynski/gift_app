@@ -17,7 +17,6 @@
 			(cat-cosmetics "?"|?cosmetics)
 			(cat-toy "?"|?toy))
 =>
-	(printout "chuj")
 	(printout t ?ID "," ?name "," ?sex "," ?age "," ?price ":" ?fashion "," ?music "," ?book "," ?games "," ?movies "," ?gadgets "," ?sport "," ?cosmetics "," ?toy)
 )
 
