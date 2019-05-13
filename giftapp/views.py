@@ -43,12 +43,20 @@ def match_preference(data):
     preference = '(preference ' + \
                  '(sex "' + data['sex'] + '") ' + \
                  '(price-level "' + data['priceLevel'] + '") ' + \
-                 '(age-level "' + data['ageLevel'] + '"))'
+                 '(age-level "' + data['ageLevel'] + '") ' + \
+                 '(cat-fashion "' + data['catFashion'] + '") ' + \
+                 '(cat-music "' + data['catMusic'] + '") ' + \
+                 '(cat-games "' + data['catGames'] + '") ' + \
+                 '(cat-movies "' + data['catMovies'] + '") ' + \
+                 '(cat-gadgets "' + data['catGadgets'] + '") ' + \
+                 '(cat-sport "' + data['catSport'] + '") ' + \
+                 '(cat-cosmetics "' + data['catCosmetics'] + '"))'
 
+    print(preference)
     clips.Clear()
     clips.BatchStar(settings.CLIPS_DIR + "/templates.clp")
     clips.BatchStar(settings.CLIPS_DIR + "/gifts.clp")
-    clips.BatchStar(settings.CLIPS_DIR + "/suggestions.clp")
+    # clips.BatchStar(settings.CLIPS_DIR + "/suggestions.clp")
     clips.BatchStar(settings.CLIPS_DIR + "/rules.clp")
     clips.Reset()
     clips.Assert(preference)
