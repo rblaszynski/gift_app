@@ -1,5 +1,5 @@
-var currentData;
-var currentGift;
+var currentGiftID;
+var currentGiftName;
 var values;
 
 $(document).ready(function () {
@@ -15,8 +15,8 @@ $("#gifts-container").css({display: "none"});
 
 $("#suggestion-submit-button").on("click", function () {
     var formData = {
-        giftId: $("#giftId").html(),
-        giftName: $("#giftName").html(),
+        giftId: currentGiftID,
+        giftName: currentGiftName,
         key: $("#suggestion-key").val(),
         value: $("#suggestion-value").val()
     };
@@ -35,6 +35,7 @@ $("#suggestion-submit-button").on("click", function () {
 });
 
 function submitForm() {
+    hide_suggestion();
     var formData = {
         ageLevel: $('#form-preference').find('select[id="age"]').val(),
         sex: $('#form-preference').find('select[id="sex"]').val(),
@@ -75,7 +76,8 @@ function submitForm() {
 }
 
 function show_suggestion(id, name) {
-    $("#giftId").text(id);
+    currentGiftID = id;
+    currentGiftName = name;
     $("#giftName").text(name);
     $("#suggestion-div").css({display: "block"});
 }
