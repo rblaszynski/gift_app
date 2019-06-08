@@ -11,7 +11,7 @@
 
   ; ; MUSIC
   (gift (ID 8)(name "Płyta CD z piosenkami dla dzieci") (sex "man") (price-level "cheap") (age-level "kid") (cat-fashion "NO") (cat-music "YES") (cat-book "NO") (cat-games "NO") (cat-movies "NO") (cat-gadgets "NO") (cat-sport "NO") (cat-cosmetics "NO") (cat-toy "NO"))
-  (gift (ID 9)(name "Zabawkowy instrument") (price-level "medium") (age-level "kid") (cat-fashion "NO") (cat-music "YES") (cat-book "NO") (cat-games "NO") (cat-movies "NO") (cat-gadgets "NO") (cat-sport "NO") (cat-cosmetics "NO") (cat-toy "NO"))
+  (gift (ID 9)(name "Zabawkowy instrument") (price-level "medium") (age-level "kid") (cat-fashion "NO") (cat-music "YES") (cat-book "NO") (cat-games "NO") (cat-movies "NO") (cat-gadgets "NO") (cat-sport "NO") (cat-cosmetics "NO") (cat-toy "YES"))
   (gift (ID 10)(name "Keyboard") (price-level "expensive") (age-level "kid") (cat-fashion "NO") (cat-music "YES") (cat-book "NO") (cat-games "NO") (cat-movies "NO") (cat-gadgets "NO") (cat-sport "NO") (cat-cosmetics "NO") (cat-toy "NO"))
   (gift (ID 11)(name "Spotify premium - karta podarunkowa") (price-level "cheap") (age-level "adult") (cat-fashion "NO") (cat-music "YES") (cat-book "NO") (cat-games "NO") (cat-movies "NO") (cat-gadgets "NO") (cat-sport "NO") (cat-cosmetics "NO") (cat-toy "NO"))
   (gift (ID 12)(name "Bilet na koncert") (price-level "medium") (age-level "adult") (cat-fashion "NO") (cat-music "YES") (cat-book "NO") (cat-games "NO") (cat-movies "NO") (cat-gadgets "NO") (cat-sport "NO") (cat-cosmetics "NO") (cat-toy "NO"))
@@ -29,8 +29,8 @@
   (gift (ID 22)(name "Harry Potter - wszystkie tomy") (price-level "expensive") (age-level "kid") (cat-fashion "NO") (cat-music "NO") (cat-book "YES") (cat-games "NO") (cat-movies "NO") (cat-gadgets "NO") (cat-sport "NO") (cat-cosmetics "NO") (cat-toy "NO"))
   (gift (ID 23)(name "Tania książka") (price-level "cheap") (age-level "adult") (cat-fashion "NO") (cat-music "NO") (cat-book "YES") (cat-games "NO") (cat-movies "NO") (cat-gadgets "NO") (cat-sport "NO") (cat-cosmetics "NO") (cat-toy "NO"))
   (gift (ID 24)(name "Tania książka") (price-level "cheap") (age-level "elder") (cat-fashion "NO") (cat-music "NO") (cat-book "YES") (cat-games "NO") (cat-movies "NO") (cat-gadgets "NO") (cat-sport "NO") (cat-cosmetics "NO") (cat-toy "NO"))
-  (gift (ID 25)(name "Karta podarunkowa do salonów Empik") (price-level "medium") (age-level "adult") (cat-fashion "NO") (cat-music "NO") (cat-book "YES") (cat-games "NO") (cat-movies "NO") (cat-gadgets "NO") (cat-sport "NO") (cat-cosmetics "NO") (cat-toy "NO"))
-  (gift (ID 26)(name "Karta podarunkowa do salonów Empik") (price-level "medium") (age-level "elder") (cat-fashion "NO") (cat-music "NO") (cat-book "YES") (cat-games "NO") (cat-movies "NO") (cat-gadgets "NO") (cat-sport "NO") (cat-cosmetics "NO") (cat-toy "NO"))
+  (gift (ID 25)(name "Karta podarunkowa do salonów Empik") (price-level "medium") (age-level "adult") (cat-fashion "NO") (cat-music "YES") (cat-book "YES") (cat-games "YES") (cat-movies "YES") (cat-gadgets "NO") (cat-sport "NO") (cat-cosmetics "NO") (cat-toy "NO"))
+  (gift (ID 26)(name "Karta podarunkowa do salonów Empik") (price-level "medium") (age-level "elder") (cat-fashion "NO") (cat-music "YES") (cat-book "YES") (cat-games "YES") (cat-movies "YES") (cat-gadgets "NO") (cat-sport "NO") (cat-cosmetics "NO") (cat-toy "NO"))
   (gift (ID 27)(name "Czytnik E-booków") (price-level "expensive") (age-level "adult") (cat-fashion "NO") (cat-music "NO") (cat-book "YES") (cat-games "NO") (cat-movies "NO") (cat-gadgets "NO") (cat-sport "NO") (cat-cosmetics "NO") (cat-toy "NO"))
   (gift (ID 28)(name "Czytnik E-booków") (price-level "expensive") (age-level "elder") (cat-fashion "NO") (cat-music "NO") (cat-book "YES") (cat-games "NO") (cat-movies "NO") (cat-gadgets "NO") (cat-sport "NO") (cat-cosmetics "NO") (cat-toy "NO"))
 
@@ -69,8 +69,8 @@
   (gift (ID 58)(name "Zestaw kina domowego") (price-level "expensive") (age-level "elder") (cat-fashion "NO") (cat-music "NO") (cat-book "NO") (cat-games "NO") (cat-movies "YES") (cat-gadgets "NO") (cat-sport "NO") (cat-cosmetics "NO") (cat-toy "NO"))
 
   ; ; GADGET
-  (gift (ID 59)(name "Fidget Spinner") (price-level "cheap") (age-level "kid") (cat-fashion "NO") (cat-music "NO") (cat-book "NO") (cat-games "NO") (cat-movies "NO") (cat-gadgets "YES") (cat-sport "NO") (cat-cosmetics "NO") (cat-toy "NO"))
-  (gift (ID 60)(name "Kostka Rubika") (price-level "cheap") (age-level "kid") (cat-fashion "NO") (cat-music "NO") (cat-book "NO") (cat-games "NO") (cat-movies "NO") (cat-gadgets "YES") (cat-sport "NO") (cat-cosmetics "NO") (cat-toy "NO"))
+  (gift (ID 59)(name "Fidget Spinner") (price-level "cheap") (age-level "kid") (cat-fashion "NO") (cat-music "NO") (cat-book "NO") (cat-games "NO") (cat-movies "NO") (cat-gadgets "YES") (cat-sport "NO") (cat-cosmetics "NO") (cat-toy "YES"))
+  (gift (ID 60)(name "Kostka Rubika") (price-level "cheap") (age-level "kid") (cat-fashion "NO") (cat-music "NO") (cat-book "NO") (cat-games "NO") (cat-movies "NO") (cat-gadgets "YES") (cat-sport "NO") (cat-cosmetics "NO") (cat-toy "YES"))
   (gift (ID 61)(name "Myszka do komputera") (sex "man") (price-level "cheap") (age-level "kid") (cat-fashion "NO") (cat-music "NO") (cat-book "NO") (cat-games "NO") (cat-movies "NO") (cat-gadgets "YES") (cat-sport "NO") (cat-cosmetics "NO") (cat-toy "NO"))
   (gift (ID 62)(name "Brelok") (sex "female") (price-level "cheap") (age-level "kid") (cat-fashion "NO") (cat-music "NO") (cat-book "NO") (cat-games "NO") (cat-movies "NO") (cat-gadgets "YES") (cat-sport "NO") (cat-cosmetics "NO") (cat-toy "NO"))
   (gift (ID 63)(name "Spersonalizowany kubek") (price-level "medium") (age-level "kid") (cat-fashion "NO") (cat-music "NO") (cat-book "NO") (cat-games "NO") (cat-movies "NO") (cat-gadgets "YES") (cat-sport "NO") (cat-cosmetics "NO") (cat-toy "NO"))
@@ -87,7 +87,7 @@
   (gift (ID 74)(name "Zegarek") (price-level "expensive") (age-level "elder") (cat-fashion "NO") (cat-music "NO") (cat-book "NO") (cat-games "NO") (cat-movies "NO") (cat-gadgets "YES") (cat-sport "NO") (cat-cosmetics "NO") (cat-toy "NO"))
 
   ; ; SPORT
-  (gift (ID 75)(name "Piórknik KOLEJORZ") (sex "man") (price-level "cheap") (age-level "kid") (cat-fashion "NO") (cat-music "NO") (cat-book "NO") (cat-games "NO") (cat-movies "NO") (cat-gadgets "NO") (cat-sport "YES") (cat-cosmetics "NO") (cat-toy "NO"))
+  (gift (ID 75)(name "Piórknik KOLEJORZ") (sex "man") (price-level "cheap") (age-level "kid") (cat-fashion "NO") (cat-music "NO") (cat-book "NO") (cat-games "NO") (cat-movies "NO") (cat-gadgets "YES") (cat-sport "YES") (cat-cosmetics "NO") (cat-toy "NO"))
   (gift (ID 76)(name "Koszulka KOLEJORZ") (sex "man") (price-level "medium") (age-level "kid") (cat-fashion "NO") (cat-music "NO") (cat-book "NO") (cat-games "NO") (cat-movies "NO") (cat-gadgets "NO") (cat-sport "YES") (cat-cosmetics "NO") (cat-toy "NO"))
   (gift (ID 77)(name "Buty sportowe") (sex "female") (price-level "medium") (age-level "kid") (cat-fashion "NO") (cat-music "NO") (cat-book "NO") (cat-games "NO") (cat-movies "NO") (cat-gadgets "NO") (cat-sport "YES") (cat-cosmetics "NO") (cat-toy "NO"))
   (gift (ID 78)(name "Kostium sportowy") (sex "man") (price-level "expensive") (age-level "kid") (cat-fashion "NO") (cat-music "NO") (cat-book "NO") (cat-games "NO") (cat-movies "NO") (cat-gadgets "NO") (cat-sport "YES") (cat-cosmetics "NO") (cat-toy "NO"))
@@ -106,8 +106,8 @@
 
   ; ; COSMETIC
   (gift (ID 91)(name "Akcesoria do stylizacji włosów") (sex "man") (price-level "cheap") (age-level "kid") (cat-fashion "NO") (cat-music "NO") (cat-book "NO") (cat-games "NO") (cat-movies "NO") (cat-gadgets "NO") (cat-sport "NO") (cat-cosmetics "YES") (cat-toy "NO"))
-  (gift (ID 92)(name "Kosmetyki dla malej księżniczki") (sex "female") (price-level "cheap") (age-level "kid") (cat-fashion "NO") (cat-music "NO") (cat-book "NO") (cat-games "NO") (cat-movies "NO") (cat-gadgets "NO") (cat-sport "NO") (cat-cosmetics "YES") (cat-toy "NO"))
-  (gift (ID 93)(name "Głowa do czesania") (sex "female") (price-level "medium") (age-level "kid") (cat-fashion "NO") (cat-music "NO") (cat-book "NO") (cat-games "NO") (cat-movies "NO") (cat-gadgets "NO") (cat-sport "NO") (cat-cosmetics "YES") (cat-toy "NO"))
+  (gift (ID 92)(name "Kosmetyki dla malej księżniczki") (sex "female") (price-level "cheap") (age-level "kid") (cat-fashion "NO") (cat-music "NO") (cat-book "NO") (cat-games "NO") (cat-movies "NO") (cat-gadgets "NO") (cat-sport "NO") (cat-cosmetics "YES") (cat-toy "YES"))
+  (gift (ID 93)(name "Głowa do czesania") (sex "female") (price-level "medium") (age-level "kid") (cat-fashion "NO") (cat-music "NO") (cat-book "NO") (cat-games "NO") (cat-movies "NO") (cat-gadgets "NO") (cat-sport "NO") (cat-cosmetics "YES") (cat-toy "YES"))
   (gift (ID 94)(name "Kosmetyki do golenia") (sex "man") (price-level "cheap") (age-level "adult") (cat-fashion "NO") (cat-music "NO") (cat-book "NO") (cat-games "NO") (cat-movies "NO") (cat-gadgets "NO") (cat-sport "NO") (cat-cosmetics "YES") (cat-toy "NO"))
   (gift (ID 95)(name "Lakier do paznokci") (sex "female") (price-level "cheap") (age-level "adult") (cat-fashion "NO") (cat-music "NO") (cat-book "NO") (cat-games "NO") (cat-movies "NO") (cat-gadgets "NO") (cat-sport "NO") (cat-cosmetics "YES") (cat-toy "NO"))
   (gift (ID 96)(name "Kosmetyki drogeryjne") (sex "female") (price-level "cheap") (age-level "adult") (cat-fashion "NO") (cat-music "NO") (cat-book "NO") (cat-games "NO") (cat-movies "NO") (cat-gadgets "NO") (cat-sport "NO") (cat-cosmetics "YES") (cat-toy "NO"))
@@ -133,7 +133,7 @@
   (gift (ID 114)(name "Mały zestaw LEGO City") (sex "man") (price-level "cheap") (age-level "kid") (cat-fashion "NO") (cat-music "NO") (cat-book "NO") (cat-games "NO") (cat-movies "NO") (cat-gadgets "NO") (cat-sport "NO") (cat-cosmetics "NO") (cat-toy "YES"))
   (gift (ID 115)(name "Samochodzik Hot Wheels") (sex "man") (price-level "cheap") (age-level "kid") (cat-fashion "NO") (cat-music "NO") (cat-book "NO") (cat-games "NO") (cat-movies "NO") (cat-gadgets "NO") (cat-sport "NO") (cat-cosmetics "NO") (cat-toy "YES"))
   (gift (ID 116)(name "Maskotka") (sex "female") (price-level "cheap") (age-level "kid") (cat-fashion "NO") (cat-music "NO") (cat-book "NO") (cat-games "NO") (cat-movies "NO") (cat-gadgets "NO") (cat-sport "NO") (cat-cosmetics "NO") (cat-toy "YES"))
-  (gift (ID 117)(name "Ubranka dla lalek") (sex "female") (price-level "cheap") (age-level "kid") (cat-fashion "NO") (cat-music "NO") (cat-book "NO") (cat-games "NO") (cat-movies "NO") (cat-gadgets "NO") (cat-sport "NO") (cat-cosmetics "NO") (cat-toy "YES"))
+  (gift (ID 117)(name "Ubranka dla lalek") (sex "female") (price-level "cheap") (age-level "kid") (cat-fashion "YES") (cat-music "NO") (cat-book "NO") (cat-games "NO") (cat-movies "NO") (cat-gadgets "NO") (cat-sport "NO") (cat-cosmetics "NO") (cat-toy "YES"))
   (gift (ID 118)(name "Żołnierzyki") (sex "man") (price-level "cheap") (age-level "kid") (cat-fashion "NO") (cat-music "NO") (cat-book "NO") (cat-games "NO") (cat-movies "NO") (cat-gadgets "NO") (cat-sport "NO") (cat-cosmetics "NO") (cat-toy "YES"))
   (gift (ID 119)(name "Średni zestaw LEGO Friends") (sex "female") (price-level "medium") (age-level "kid") (cat-fashion "NO") (cat-music "NO") (cat-book "NO") (cat-games "NO") (cat-movies "NO") (cat-gadgets "NO") (cat-sport "NO") (cat-cosmetics "NO") (cat-toy "YES"))
   (gift (ID 120)(name "Średni zestaw LEGO Ninjago") (sex "man") (price-level "medium") (age-level "kid") (cat-fashion "NO") (cat-music "NO") (cat-book "NO") (cat-games "NO") (cat-movies "NO") (cat-gadgets "NO") (cat-sport "NO") (cat-cosmetics "NO") (cat-toy "YES"))
@@ -144,9 +144,9 @@
   (gift (ID 125)(name "Zestaw małego majsterkowicza") (sex "man") (price-level "medium") (age-level "kid") (cat-fashion "NO") (cat-music "NO") (cat-book "NO") (cat-games "NO") (cat-movies "NO") (cat-gadgets "NO") (cat-sport "NO") (cat-cosmetics "NO") (cat-toy "YES"))
   (gift (ID 126)(name "Duży zestaw LEGO Friends") (sex "female") (price-level "expensive") (age-level "kid") (cat-fashion "NO") (cat-music "NO") (cat-book "NO") (cat-games "NO") (cat-movies "NO") (cat-gadgets "NO") (cat-sport "NO") (cat-cosmetics "NO") (cat-toy "YES"))
   (gift (ID 127)(name "Duży zestaw LEGO City") (sex "man") (price-level "expensive") (age-level "kid") (cat-fashion "NO") (cat-music "NO") (cat-book "NO") (cat-games "NO") (cat-movies "NO") (cat-gadgets "NO") (cat-sport "NO") (cat-cosmetics "NO") (cat-toy "YES"))
-  (gift (ID 128)(name "Trampolina") (price-level "expensive") (age-level "kid") (cat-fashion "NO") (cat-music "NO") (cat-book "NO") (cat-games "NO") (cat-movies "NO") (cat-gadgets "NO") (cat-sport "NO") (cat-cosmetics "NO") (cat-toy "YES"))
+  (gift (ID 128)(name "Trampolina") (price-level "expensive") (age-level "kid") (cat-fashion "NO") (cat-music "NO") (cat-book "NO") (cat-games "NO") (cat-movies "NO") (cat-gadgets "NO") (cat-sport "YES") (cat-cosmetics "NO") (cat-toy "YES"))
   (gift (ID 129)(name "Interaktywna maskotka") (sex "female") (price-level "expensive") (age-level "kid") (cat-fashion "NO") (cat-music "NO") (cat-book "NO") (cat-games "NO") (cat-movies "NO") (cat-gadgets "NO") (cat-sport "NO") (cat-cosmetics "NO") (cat-toy "YES"))
-  (gift (ID 130)(name "Furby") (price-level "expensive") (age-level "kid") (cat-fashion "NO") (cat-music "NO") (cat-book "NO") (cat-games "NO") (cat-movies "NO") (cat-gadgets "NO") (cat-sport "NO") (cat-cosmetics "NO") (cat-toy "YES"))
+  (gift (ID 130)(name "Furby") (price-level "expensive") (age-level "kid") (cat-fashion "NO") (cat-music "NO") (cat-book "NO") (cat-games "NO") (cat-movies "NO") (cat-gadgets "YES") (cat-sport "NO") (cat-cosmetics "NO") (cat-toy "YES"))
   (gift (ID 131)(name "Mała kuchnia") (sex "female") (price-level "expensive") (age-level "kid") (cat-fashion "NO") (cat-music "NO") (cat-book "NO") (cat-games "NO") (cat-movies "NO") (cat-gadgets "NO") (cat-sport "NO") (cat-cosmetics "NO") (cat-toy "YES"))
   (gift (ID 132)(name "Hatchimals") (price-level "expensive") (age-level "kid") (cat-fashion "NO") (cat-music "NO") (cat-book "NO") (cat-games "NO") (cat-movies "NO") (cat-gadgets "NO") (cat-sport "NO") (cat-cosmetics "NO") (cat-toy "YES"))
 )
