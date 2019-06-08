@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -36,21 +36,27 @@
             zdecydować, którą opcję wybrać pozostaw puste pole. </p>
         <form id="form-preference" onsubmit="return false" class="ui form twelve wide column">
             <div class="container preference-container">
-                <div class="row">
-                    <div class="col-md-4 mb-3">
+                <button onclick="showAge()" id="showAgeButton" class="btn btn-secondary btn-sm btn-block form-button">Wybierz wiek
+                </button>
+                <div class="row" id="age-row">
+                    <div class="col-md-12 mb-3">
                         <label for="age">Wiek</label>
                         <select class="custom-select d-block w-100" id="age">
                             <option value="?">Wybierz...</option>
                             <option value="kid">Dziecko</option>
                             <option value="teen">Nastolatek</option>
                             <option value="adult">Dorosły</option>
-                            <option value="elder">Elder</option>
+                            <option value="elder">Senior</option>
                         </select>
                         <div class="invalid-feedback">
                             Please select a valid age.
                         </div>
                     </div>
-                    <div class="col-md-4 mb-3">
+                </div>
+                <button onclick="showSex()" id="showSexButton" class="btn btn-secondary btn-sm btn-block form-button">Wybierz płeć
+                </button>
+                <div class="row" id="sex-row">
+                    <div class="col-md-12 mb-3">
                         <label for="sex">Płeć</label>
                         <select class="custom-select d-block w-100" id="sex">
                             <option value="?">Wybierz...</option>
@@ -61,7 +67,11 @@
                             Please provide a valid sex.
                         </div>
                     </div>
-                    <div class="col-md-4 mb-3">
+                </div>
+                <button onclick="showPrice()" id="showPriceButton" class="btn btn-secondary btn-sm btn-block form-button">Wybierz cenę prezentu
+                </button>
+                <div class="row" id="price-row">
+                    <div class="col-md-12 mb-3">
                         <label for="price">Cena</label>
                         <select class="custom-select d-block w-100" id="price">
                             <option value="?">Wybierz...</option>
@@ -74,111 +84,116 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-4 mb-3">
-                        <label for="fashion">Moda</label>
-                        <select class="custom-select d-block w-100" id="fashion">
-                            <option value="?">Wybierz...</option>
-                            <option value="YES">Tak</option>
-                            <option value="NO">Nie</option>
-                        </select>
-                        <div class="invalid-feedback">
-                            Please select a valid fashion.
+                <button onclick="showCategories()" id="showCategoriesButton" class="btn btn-secondary btn-sm btn-block form-button">
+                    Wybierz kategorię prezentu
+                </button>
+                <div id="categories">
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <label for="fashion">Moda</label>
+                            <select class="custom-select d-block w-100" id="fashion">
+                                <option value="?">Wybierz...</option>
+                                <option value="YES">Tak</option>
+                                <option value="NO">Nie</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select a valid fashion.
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="music">Muzyka</label>
+                            <select class="custom-select d-block w-100" id="music">
+                                <option value="?">Wybierz...</option>
+                                <option value="YES">Tak</option>
+                                <option value="NO">Nie</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please provide a valid music.
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="games">Gra</label>
+                            <select class="custom-select d-block w-100" id="games">
+                                <option value="?">Wybierz...</option>
+                                <option value="YES">Tak</option>
+                                <option value="NO">Nie</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please provide a valid game.
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-3">
-                        <label for="music">Muzyka</label>
-                        <select class="custom-select d-block w-100" id="music">
-                            <option value="?">Wybierz...</option>
-                            <option value="YES">Tak</option>
-                            <option value="NO">Nie</option>
-                        </select>
-                        <div class="invalid-feedback">
-                            Please provide a valid music.
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <label for="movies">Film</label>
+                            <select class="custom-select d-block w-100" id="movies">
+                                <option value="?">Wybierz...</option>
+                                <option value="YES">Tak</option>
+                                <option value="NO">Nie</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select a valid movie.
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="gadgets">Gadżet</label>
+                            <select class="custom-select d-block w-100" id="gadgets">
+                                <option value="?">Wybierz...</option>
+                                <option value="YES">Tak</option>
+                                <option value="NO">Nie</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please provide a valid gadget.
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="sport">Sport</label>
+                            <select class="custom-select d-block w-100" id="sport">
+                                <option value="?">Wybierz...</option>
+                                <option value="YES">Tak</option>
+                                <option value="NO">Nie</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please provide a valid sport.
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-3">
-                        <label for="games">Gra</label>
-                        <select class="custom-select d-block w-100" id="games">
-                            <option value="?">Wybierz...</option>
-                            <option value="YES">Tak</option>
-                            <option value="NO">Nie</option>
-                        </select>
-                        <div class="invalid-feedback">
-                            Please provide a valid game.
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <label for="cosmetics">Kosmetyk</label>
+                            <select class="custom-select d-block w-100" id="cosmetics">
+                                <option value="?">Wybierz...</option>
+                                <option value="YES">Tak</option>
+                                <option value="NO">Nie</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select a valid cosmetic.
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4 mb-3">
-                        <label for="movies">Film</label>
-                        <select class="custom-select d-block w-100" id="movies">
-                            <option value="?">Wybierz...</option>
-                            <option value="YES">Tak</option>
-                            <option value="NO">Nie</option>
-                        </select>
-                        <div class="invalid-feedback">
-                            Please select a valid movie.
+                        <div class="col-md-4 mb-3">
+                            <label for="toy">Zabawka</label>
+                            <select class="custom-select d-block w-100" id="toy">
+                                <option value="?">Wybierz...</option>
+                                <option value="YES">Tak</option>
+                                <option value="NO">Nie</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select a valid toy.
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <label for="gadgets">Gadżet</label>
-                        <select class="custom-select d-block w-100" id="gadgets">
-                            <option value="?">Wybierz...</option>
-                            <option value="YES">Tak</option>
-                            <option value="NO">Nie</option>
-                        </select>
-                        <div class="invalid-feedback">
-                            Please provide a valid gadget.
+                        <div class="col-md-4 mb-3">
+                            <label for="book">Książka</label>
+                            <select class="custom-select d-block w-100" id="book">
+                                <option value="?">Wybierz...</option>
+                                <option value="YES">Tak</option>
+                                <option value="NO">Nie</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select a valid book.
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <label for="sport">Sport</label>
-                        <select class="custom-select d-block w-100" id="sport">
-                            <option value="?">Wybierz...</option>
-                            <option value="YES">Tak</option>
-                            <option value="NO">Nie</option>
-                        </select>
-                        <div class="invalid-feedback">
-                            Please provide a valid sport.
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4 mb-3">
-                        <label for="cosmetics">Kosmetyk</label>
-                        <select class="custom-select d-block w-100" id="cosmetics">
-                            <option value="?">Wybierz...</option>
-                            <option value="YES">Tak</option>
-                            <option value="NO">Nie</option>
-                        </select>
-                        <div class="invalid-feedback">
-                            Please select a valid cosmetic.
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <label for="toy">Zabawka</label>
-                        <select class="custom-select d-block w-100" id="toy">
-                            <option value="?">Wybierz...</option>
-                            <option value="YES">Tak</option>
-                            <option value="NO">Nie</option>
-                        </select>
-                        <div class="invalid-feedback">
-                            Please select a valid toy.
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <label for="book">Książka</label>
-                        <select class="custom-select d-block w-100" id="book">
-                            <option value="?">Wybierz...</option>
-                            <option value="YES">Tak</option>
-                            <option value="NO">Nie</option>
-                        </select>
-                        <div class="invalid-feedback">
-                            Please select a valid book.
-                        </div>
-                    </div>
 
+                    </div>
                 </div>
             </div>
             <hr class="mb-4">
@@ -188,7 +203,7 @@
     <div id="suggestion-div">
         <hr class="mb-4">
         <div class="suggestion-header">
-            <h4>Zmodyfikuj kategorię <a id="giftName"></a></h4>
+            <h4>Zmodyfikuj kategorię prezentu <a id="giftName"></a></h4>
         </div>
         <form id="form-suggestion" onsubmit="return false" class="ui form twelve wide column">
             <div class="row">

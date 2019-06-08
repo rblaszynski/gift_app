@@ -12,6 +12,10 @@ $("#submit-button").on("click", function () {
 
 $("#suggestion-div").css({display: "none"});
 $("#gifts-container").css({display: "none"});
+$("#age-row").css({display: "none"});
+$("#sex-row").css({display: "none"});
+$("#price-row").css({display: "none"});
+$("#categories").css({display: "none"});
 
 $("#suggestion-submit-button").on("click", function () {
     var formData = {
@@ -90,7 +94,8 @@ function chooseSecondSelector() {
     ageSelectors =
         '<option value="kid">Dziecko</option>' +
         '<option value="teen">Nastolatek</option>' +
-        '<option value="adult">Dorosły</option>';
+        '<option value="adult">Dorosły</option>' +
+        '<option value="elder">Senior</option>';
 
     sexSelectors =
         '<option value="man">Mężczyzna</option>' +
@@ -124,4 +129,24 @@ function chooseSecondSelector() {
     }
     secondSelector.innerHTML = options;
 
+}
+
+function showAge() {
+        $("#showAgeButton").css({display: "none"});
+        $("#age-row").css({display: "block"});
+}
+
+function showSex() {
+        $("#showSexButton").css({display: "none"});
+        $("#sex-row").css({display: "block"});
+}
+
+function showPrice() {
+        $("#showPriceButton").css({display: "none"});
+        $("#price-row").css({display: "block"});
+}
+
+function showCategories() {
+        $("#showCategoriesButton").css({display: "none"});
+        $("#categories").css({display: "block"});
 }
