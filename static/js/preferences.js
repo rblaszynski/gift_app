@@ -88,24 +88,22 @@ function hide_suggestion() {
 
 function chooseSecondSelector() {
     ageSelectors =
-        '<option value="kid">kid</option>' +
-        '<option value="teen">teen</option>' +
-        '<option value="adult">adult</option>' +
-        '<option value="elder">elder</option>';
+        '<option value="kid">Dziecko</option>' +
+        '<option value="teen">Nastolatek</option>' +
+        '<option value="adult">Dorosły</option>';
 
     sexSelectors =
-        '<option value="man">man</option>' +
-        '<option value="woman">woman</option>' +
-        '<option value="unisex">unisex</option>';
+        '<option value="man">Mężczyzna</option>' +
+        '<option value="woman">Kobieta</option>';
 
     priceSelectors =
-        '<option value="cheap">cheap</option>' +
-        '<option value="medium">medium</option>' +
-        '<option value="expensive">expensive</option>';
+        '<option value="cheap">Tani</option>' +
+        '<option value="medium">Średni</option>' +
+        '<option value="expensive">Drogi</option>';
 
     booleanSelectors =
-        '<option value="YES">yes</option>' +
-        '<option value="NO">no</option>';
+        '<option value="YES">Tak</option>' +
+        '<option value="NO">Nie</option>';
 
     var secondSelector = document.getElementById('suggestion-value');
     var firstSelector = $("#suggestion-key").val();

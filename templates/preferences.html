@@ -22,27 +22,28 @@
                 </a>
             </h3>
             <nav class="nav nav-masthead justify-content-center">
-                <a class="nav-link" href="/">Home</a>
-                <a class="nav-link active" href="/preferences">Preferences</a>
-                <a class="nav-link" href="/about">About</a>
+                <a class="nav-link" href="/">Strona główna</a>
+                <a class="nav-link active" href="/preferences">Wybór prezentu</a>
+                <a class="nav-link" href="/about">O nas</a>
             </nav>
         </div>
     </header>
 
     <main role="main" class="inner cover px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-        <h1 class="cover-heading">Choose your preferences!</h1>
-        <p class="lead">Choose options that best describes person you want to buy a gift. lorem lorem lorem lorem lorem
-            lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem </p>
+        <h1 class="cover-heading">Wybierz swoje preferencje!</h1>
+        <p class="lead">Wybierz opcje, które w najlepszy sposób opisują obdarowywaną osobę.</p>
+        <p class="lead">Jeśli nie możesz się
+            zdecydować, którą opcję wybrać pozostaw puste pole. </p>
         <form id="form-preference" onsubmit="return false" class="ui form twelve wide column">
             <div class="container preference-container">
                 <div class="row">
                     <div class="col-md-4 mb-3">
-                        <label for="age">Age</label>
+                        <label for="age">Wiek</label>
                         <select class="custom-select d-block w-100" id="age">
-                            <option value="?">Choose...</option>
-                            <option value="kid">Kid</option>
-                            <option value="teen">Teen</option>
-                            <option value="adult">Adult</option>
+                            <option value="?">Wybierz...</option>
+                            <option value="kid">Dziecko</option>
+                            <option value="teen">Nastolatek</option>
+                            <option value="adult">Dorosły</option>
                             <option value="elder">Elder</option>
                         </select>
                         <div class="invalid-feedback">
@@ -50,24 +51,23 @@
                         </div>
                     </div>
                     <div class="col-md-4 mb-3">
-                        <label for="sex">Sex</label>
+                        <label for="sex">Płeć</label>
                         <select class="custom-select d-block w-100" id="sex">
-                            <option value="?">Choose...</option>
-                            <option value="man">Man</option>
-                            <option value="female">Women</option>
-                            <option value="unisex">Unisex</option>
+                            <option value="?">Wybierz...</option>
+                            <option value="man">Mężczyzna</option>
+                            <option value="female">Kobieta</option>
                         </select>
                         <div class="invalid-feedback">
                             Please provide a valid sex.
                         </div>
                     </div>
                     <div class="col-md-4 mb-3">
-                        <label for="price">Price</label>
+                        <label for="price">Cena</label>
                         <select class="custom-select d-block w-100" id="price">
-                            <option value="?">Choose...</option>
-                            <option value="cheap">Cheap</option>
-                            <option value="medium">Medium</option>
-                            <option value="expensive">Expensive</option>
+                            <option value="?">Wybierz...</option>
+                            <option value="cheap">Tani</option>
+                            <option value="medium">Średni</option>
+                            <option value="expensive">Drogi</option>
                         </select>
                         <div class="invalid-feedback">
                             Please provide a valid price.
@@ -76,33 +76,33 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4 mb-3">
-                        <label for="fashion">Fashion</label>
+                        <label for="fashion">Moda</label>
                         <select class="custom-select d-block w-100" id="fashion">
-                            <option value="?">Choose...</option>
-                            <option value="YES">Yes</option>
-                            <option value="NO">No</option>
+                            <option value="?">Wybierz...</option>
+                            <option value="YES">Tak</option>
+                            <option value="NO">Nie</option>
                         </select>
                         <div class="invalid-feedback">
                             Please select a valid fashion.
                         </div>
                     </div>
                     <div class="col-md-4 mb-3">
-                        <label for="music">Music</label>
+                        <label for="music">Muzyka</label>
                         <select class="custom-select d-block w-100" id="music">
-                            <option value="?">Choose...</option>
-                            <option value="YES">Yes</option>
-                            <option value="NO">No</option>
+                            <option value="?">Wybierz...</option>
+                            <option value="YES">Tak</option>
+                            <option value="NO">Nie</option>
                         </select>
                         <div class="invalid-feedback">
                             Please provide a valid music.
                         </div>
                     </div>
                     <div class="col-md-4 mb-3">
-                        <label for="games">Games</label>
+                        <label for="games">Gra</label>
                         <select class="custom-select d-block w-100" id="games">
-                            <option value="?">Choose...</option>
-                            <option value="YES">Yes</option>
-                            <option value="NO">No</option>
+                            <option value="?">Wybierz...</option>
+                            <option value="YES">Tak</option>
+                            <option value="NO">Nie</option>
                         </select>
                         <div class="invalid-feedback">
                             Please provide a valid game.
@@ -111,22 +111,22 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4 mb-3">
-                        <label for="movies">Movies</label>
+                        <label for="movies">Film</label>
                         <select class="custom-select d-block w-100" id="movies">
-                            <option value="?">Choose...</option>
-                            <option value="YES">Yes</option>
-                            <option value="NO">No</option>
+                            <option value="?">Wybierz...</option>
+                            <option value="YES">Tak</option>
+                            <option value="NO">Nie</option>
                         </select>
                         <div class="invalid-feedback">
                             Please select a valid movie.
                         </div>
                     </div>
                     <div class="col-md-4 mb-3">
-                        <label for="gadgets">Gadgets</label>
+                        <label for="gadgets">Gadżet</label>
                         <select class="custom-select d-block w-100" id="gadgets">
-                            <option value="?">Choose...</option>
-                            <option value="YES">Yes</option>
-                            <option value="NO">No</option>
+                            <option value="?">Wybierz...</option>
+                            <option value="YES">Tak</option>
+                            <option value="NO">Nie</option>
                         </select>
                         <div class="invalid-feedback">
                             Please provide a valid gadget.
@@ -135,9 +135,9 @@
                     <div class="col-md-4 mb-3">
                         <label for="sport">Sport</label>
                         <select class="custom-select d-block w-100" id="sport">
-                            <option value="?">Choose...</option>
-                            <option value="YES">Yes</option>
-                            <option value="NO">No</option>
+                            <option value="?">Wybierz...</option>
+                            <option value="YES">Tak</option>
+                            <option value="NO">Nie</option>
                         </select>
                         <div class="invalid-feedback">
                             Please provide a valid sport.
@@ -146,33 +146,33 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4 mb-3">
-                        <label for="cosmetics">Cosmetics</label>
+                        <label for="cosmetics">Kosmetyk</label>
                         <select class="custom-select d-block w-100" id="cosmetics">
-                            <option value="?">Choose...</option>
-                            <option value="YES">Yes</option>
-                            <option value="NO">No</option>
+                            <option value="?">Wybierz...</option>
+                            <option value="YES">Tak</option>
+                            <option value="NO">Nie</option>
                         </select>
                         <div class="invalid-feedback">
                             Please select a valid cosmetic.
                         </div>
                     </div>
                     <div class="col-md-4 mb-3">
-                        <label for="toy">Toy</label>
+                        <label for="toy">Zabawka</label>
                         <select class="custom-select d-block w-100" id="toy">
-                            <option value="?">Choose...</option>
-                            <option value="YES">Yes</option>
-                            <option value="NO">No</option>
+                            <option value="?">Wybierz...</option>
+                            <option value="YES">Tak</option>
+                            <option value="NO">Nie</option>
                         </select>
                         <div class="invalid-feedback">
                             Please select a valid toy.
                         </div>
                     </div>
                     <div class="col-md-4 mb-3">
-                        <label for="book">Book</label>
+                        <label for="book">Książka</label>
                         <select class="custom-select d-block w-100" id="book">
-                            <option value="?">Choose...</option>
-                            <option value="YES">Yes</option>
-                            <option value="NO">No</option>
+                            <option value="?">Wybierz...</option>
+                            <option value="YES">Tak</option>
+                            <option value="NO">Nie</option>
                         </select>
                         <div class="invalid-feedback">
                             Please select a valid book.
@@ -182,56 +182,55 @@
                 </div>
             </div>
             <hr class="mb-4">
-            <button id="submit-button" class="btn btn-secondary btn-lg btn-block">Find gift</button>
+            <button id="submit-button" class="btn btn-secondary btn-lg btn-block">Znajdź prezenty</button>
         </form>
     </main>
     <div id="suggestion-div">
         <hr class="mb-4">
         <div class="suggestion-header">
-            <h4>Modify <a id="giftName"></a> attribute:</h4>
+            <h4>Zmodyfikuj kategorię <a id="giftName"></a></h4>
         </div>
         <form id="form-suggestion" onsubmit="return false" class="ui form twelve wide column">
             <div class="row">
                 <div class="col-md-6 mb-3">
-                    <label for="suggestion-key">Category</label>
+                    <label for="suggestion-key">Kategoria</label>
                     <select onclick="chooseSecondSelector()" class="custom-select d-block w-100" id="suggestion-key">
-                        <option value="sex">Sex</option>
-                        <option value="price-level">Price level</option>
-                        <option value="age-level">Age level</option>
-                        <option value="cat-fashion">Is fashion?</option>
-                        <option value="cat-music">Is music?</option>
-                        <option value="cat-book">Is book?</option>
-                        <option value="cat-games">Is game?</option>
-                        <option value="cat-movies">Is movie?</option>
-                        <option value="cat-gadgets">Is gadget?</option>
-                        <option value="cat-sport">Is sport?</option>
-                        <option value="cat-cosmetics">Is cosmetic?</option>
-                        <option value="cat-toy">Is toy?</option>
+                        <option value="sex">Płeć</option>
+                        <option value="price-level">Cena</option>
+                        <option value="age-level">Wiek</option>
+                        <option value="cat-fashion">Moda</option>
+                        <option value="cat-music">Muzyka</option>
+                        <option value="cat-book">Książka</option>
+                        <option value="cat-games">Gra</option>
+                        <option value="cat-movies">Film</option>
+                        <option value="cat-gadgets">Gadżet</option>
+                        <option value="cat-sport">Sport</option>
+                        <option value="cat-cosmetics">Kosmetyk</option>
+                        <option value="cat-toy">Zabawka</option>
                     </select>
                     <div class="invalid-feedback">
                         Please select a valid book.
                     </div>
                 </div>
                 <div class="col-md-6 mb-3">
-                    <label for="suggestion-value">Value</label>
+                    <label for="suggestion-value">Wartość</label>
                     <select class="custom-select d-block w-100" id="suggestion-value">
-                        <option value="man">man</option>
-                        <option value="woman">woman</option>
-                        <option value="unisex">unisex</option>
+                        <option value="man">Mężczyzna</option>
+                        <option value="woman">Kobieta</option>
                     </select>
                     <div class="invalid-feedback">
                         Please select a valid book.
                     </div>
                 </div>
             </div>
-            <button id="suggestion-submit-button" class="btn btn-secondary btn-md btn-block">Modify</button>
+            <button id="suggestion-submit-button" class="btn btn-secondary btn-md btn-block">Modyfikuj</button>
         </form>
     </div>
     <div class="container" id="gifts-container">
         <hr class="mb-4">
         <div class="gift-container-header">
-            <h2>Here's list of suggested gifts:</h2>
-            <h5>Click one of them to add your own suggestion</h5>
+            <h2>Lista proponowanych prezentów:</h2>
+            <h5>Kliknij na jeden z nich aby dodać własną sugestię.</h5>
         </div>
         <ul id="result"></ul>
     </div>
