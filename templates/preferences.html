@@ -11,7 +11,7 @@
 
     <title>Gift App</title>
 </head>
-<body class="text-center">
+<body class="text-center" style="height: max-content; min-height: 100%;">
 
 <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
     <header class="masthead mb-auto">
@@ -29,9 +29,10 @@
         </div>
     </header>
 
-    <main role="main" class="inner cover">
+    <main role="main" class="inner cover px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
         <h1 class="cover-heading">Choose your preferences!</h1>
-        <p class="lead">Choose options that best describes person you want to buy a gift.</p>
+        <p class="lead">Choose options that best describes person you want to buy a gift. lorem lorem lorem lorem lorem
+            lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem </p>
         <form id="form-preference" onsubmit="return false" class="ui form twelve wide column">
             <div class="container preference-container">
                 <div class="row">
@@ -184,7 +185,54 @@
             <button id="submit-button" class="btn btn-secondary btn-lg btn-block">Find gift</button>
         </form>
     </main>
-    <div class="container">
+    <div id="suggestion-div">
+        <hr class="mb-4">
+        <div class="suggestion-header">
+            <h4>Modify <a id="giftName"></a> attribute:</h4>
+        </div>
+        <form id="form-suggestion" onsubmit="return false" class="ui form twelve wide column">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="suggestion-key">Category</label>
+                    <select onclick="chooseSecondSelector()" class="custom-select d-block w-100" id="suggestion-key">
+                        <option value="sex">Sex</option>
+                        <option value="price-level">Price level</option>
+                        <option value="age-level">Age level</option>
+                        <option value="cat-fashion">Is fashion?</option>
+                        <option value="cat-music">Is music?</option>
+                        <option value="cat-book">Is book?</option>
+                        <option value="cat-games">Is game?</option>
+                        <option value="cat-movies">Is movie?</option>
+                        <option value="cat-gadgets">Is gadget?</option>
+                        <option value="cat-sport">Is sport?</option>
+                        <option value="cat-cosmetics">Is cosmetic?</option>
+                        <option value="cat-toy">Is toy?</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please select a valid book.
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="suggestion-value">Value</label>
+                    <select class="custom-select d-block w-100" id="suggestion-value">
+                        <option value="man">man</option>
+                        <option value="woman">woman</option>
+                        <option value="unisex">unisex</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please select a valid book.
+                    </div>
+                </div>
+            </div>
+            <button id="suggestion-submit-button" class="btn btn-secondary btn-md btn-block">Modify</button>
+        </form>
+    </div>
+    <div class="container" id="gifts-container">
+        <hr class="mb-4">
+        <div class="gift-container-header">
+            <h2>Here's list of suggested gifts:</h2>
+            <h5>Click one of them to add your own suggestion</h5>
+        </div>
         <ul id="result"></ul>
     </div>
     <footer class="mastfoot mt-auto">

@@ -76,26 +76,24 @@ def prepare_response(data):
             response.append({"id": val[0], "name": val[1]})
     return response
 
+
 @csrf_exempt
 def modify(request):
+    print(request.POST)
     insertSuggestionIntoDatabase(request.POST)
     insertSuggestionsIntoClips()
-    return HttpResponse('')
+    return HttpResponse(request.POST)
 
 
 def insertSuggestionIntoDatabase(data):
-    attributeMap = {'sex': 'sex',
-                    'priceLevel': 'price-level',
-                    'ageLevel': 'age-level'}
-
     suggestion = Suggestion(
         giftName=data['giftName'],
         giftId=int(data['giftId']),
-        attribute=attributeMap[data['key']],
+        attribute=data['key'],
         value=data['value'],
         quantity=0)
 
-    suggestions = Suggestion.objects.filter(giftId=int(data['giftId']), attribute=attributeMap[data['key']],
+    suggestions = Suggestion.objects.filter(giftId=int(data['giftId']), attribute=data['key'],
                                             value=data['value'])
     if (len(suggestions) != 0):
         suggestion = suggestions[0]
@@ -118,11 +116,12 @@ def insertSuggestionsIntoClips():
     lines = ['(deffacts suggestions\n']
     for suggestion in suggestions:
         lines.append('  (suggestion '
-                     '(gift-name "'+suggestion.giftName+'")'
-                     '(gift-id '+str(suggestion.giftId)+')'
-                     '(attribute "'+suggestion.attribute+'")'
-                     '(value "'+suggestion.value+'")'
-                     '(quantity '+str(suggestion.quantity)+'))\n')
+                     '(gift-name "' + suggestion.giftName + '")'
+                                                            '(gift-id ' + str(suggestion.giftId) + ')'
+                                                                                                   '(attribute "' + suggestion.attribute + '")'
+                                                                                                                                           '(value "' + suggestion.value + '")'
+                                                                                                                                                                           '(quantity ' + str(
+            suggestion.quantity) + '))\n')
 
     lines.append(')\n')
 
