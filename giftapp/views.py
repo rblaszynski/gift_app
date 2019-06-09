@@ -1,15 +1,12 @@
-# -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
 import os
 
 import clips
-import json
 
 from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render
 
-# Create your views here.
 from django.views.decorators.csrf import csrf_exempt
 
 from gift_app import settings
@@ -30,7 +27,6 @@ def preferences(request):
 
 @csrf_exempt
 def new_preference(request):
-    # body = json.loads(request.POST)
     result = match_preference(request.POST)
     print result
     response = []
@@ -40,7 +36,6 @@ def new_preference(request):
 
 
 def match_preference(data):
-    # Preference
     preference = '(preference ' + \
                  '(sex "' + data['sex'] + '") ' + \
                  '(price-level "' + data['priceLevel'] + '") ' + \
@@ -104,14 +99,12 @@ def insertSuggestionIntoDatabase(data):
 
 
 def insertSuggestionsIntoClips():
-    # check if a fact-file exists
     FactsFile = settings.CLIPS_DIR + "/suggestions.clp"
     if not os.path.isfile(FactsFile):
         file = open(FactsFile, 'w+')
         file.write("(deffacts suggestions)\n")
         file.close()
 
-    # modify facts
     suggestions = Suggestion.objects.all()
     lines = ['(deffacts suggestions\n']
     for suggestion in suggestions:
@@ -125,5 +118,4 @@ def insertSuggestionsIntoClips():
 
     lines.append(')\n')
 
-    # new facts
     open(FactsFile, 'w').writelines(lines)
